@@ -1,0 +1,15 @@
+@import '../styles/Home.module.scss';
+
+.SearchBox {
+    max-width: 1200px;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+    
+}
+
+.SearchBoxWrapper{
+    background-color: $color-primary;
+    height: 100px; 
+    padding: 20px 0 0 0;
+}

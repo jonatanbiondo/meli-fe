@@ -1,0 +1,38 @@
+form.InputSearch{
+    right: 10px; 
+    left: 85px; 
+    padding: 8px 1px;
+    overflow: auto;
+    height: 56px;
+    position: absolute;
+    top: 0;
+}
+
+.InputSearch input[type="text"]{
+    padding: 5px 10px 7px 10px;
+    box-shadow: 0 1px 2px 0 #EFEF;
+    height: 39px;
+    background-color: #FFF;
+    border: 0 rgba(0,0,0,.2); 
+    position: relative;
+    width: 100%;
+}
+
+.InputSearch button{ 
+    background-image: none; 
+    cursor: pointer;
+    position: absolute;
+    border-radius: 0 2px 2px 0;
+    width: 46px;
+    height: 40px;
+    border: 0 rgba(0,0,0,.2);
+    background-color: rgb(228, 227, 227);
+    top: 8px;
+    right: 1px;
+    padding: 0;
+    padding-top: 0px;
+    border: none;
+    font-size: 22px;
+    color: #666;
+    line-height: 1em;
+}
