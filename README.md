@@ -9,7 +9,7 @@ Para los endpoints necesarios, utilicé la facilidad que brinda Nextjs de crear 
 Los archivos respectivos de cada pagina se encuentra en el directorio /pages:
 Los paths en la aplicacion responden a lo solicitado
 
- - pages/indes.js => Caja de Búsqueda
+ - pages/index.js => Caja de Búsqueda
  - pages/items.js => Resultados de busqueda
  - pages/items/[id].js =>Detalle del producto
 
