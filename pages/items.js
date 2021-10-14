@@ -1,15 +1,14 @@
-import Head from 'next/head'
-import Image from 'next/image' 
-import axios from 'axios'
-import SearchBox from '../components/SearchBox'
-import styles from '../styles/Items.module.scss' 
-import useSWR from 'swr'
+import Head from 'next/head' 
+import SearchBox from '../components/SearchBox' 
 import {api} from "../utils/api"
+import styles from '../styles/Items.module.scss'
+import Breadcrum from "../components/Breadcrum"
+import Resultlist from "../components/Resultlist"
 
-export default function Items({items, query}) {
+export default function Items({items, categories, query}) {
   
 
-    console.log(items)
+   
 
   return (
     <div>
@@ -24,11 +23,25 @@ export default function Items({items, query}) {
         <SearchBox query={query}/>
       </header>
 
-      <main >
-          Resultados:
-        {items.map(item => {
-            return <p key={item.id}>{item.title}</p>
-        })}
+      <main className={styles.main}>
+
+        <div className={styles.main_container}>
+          
+          
+          <Breadcrum items={categories} />
+              
+           
+          {
+          (items.length >0 )? 
+              <Resultlist items={items} />
+              : ''
+          }
+
+          
+
+        </div>
+
+         
       </main>
 
       

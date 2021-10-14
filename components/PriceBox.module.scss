@@ -1,0 +1,42 @@
+.price_container{
+    display: inline-block;
+    font-size: 24px; 
+    color: rgb(51, 51, 51);
+    font-weight: 400;
+      
+    .decimals{
+        font-size: 10px;
+        line-height: 20px;
+        float: left 
+    }
+
+    .amount{ 
+        float: left 
+    }
+
+    .currency{ 
+        float: left 
+    }
+}
+
+.price_container_large{
+    display: inline-block;
+    font-size: 36px; 
+    color: rgb(51, 51, 51);
+    font-weight: 400;
+      
+    .decimals{
+        font-size: 15px;
+        line-height: 30px;
+        float: left 
+    }
+
+    .amount{ 
+        float: left 
+    }
+
+    .currency{ 
+        float: left 
+    }
+}
+

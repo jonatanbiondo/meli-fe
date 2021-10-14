@@ -22,7 +22,7 @@ export default async function handler(req, res) {
                     decimals: data.price - Math.floor(data.price)
 
                 },
-                picture: data.thumbnail,
+                picture: data.pictures[0].url,
                 condition:data.condition,
                 free_shipping: data.shipping.free_shipping,
                 sold_quantity: data.sold_quantity,

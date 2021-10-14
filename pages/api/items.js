@@ -28,11 +28,11 @@ export default async function handler(req, res) {
                     amount:item.price,
                     currency: item.currency_id,
                     decimals: item.price - Math.floor(item.price)
-
                 },
                 picture: item.thumbnail,
                 condition:item.condition,
-                free_shipping: item.shipping.free_shipping
+                free_shipping: item.shipping.free_shipping,
+                state_name: item.address.state_name
             }
         })
           
