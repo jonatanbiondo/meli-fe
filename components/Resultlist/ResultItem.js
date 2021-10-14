@@ -1,8 +1,8 @@
  
 import Link from 'next/link'
 import Image from 'next/image'
-import PriceBox from './PriceBox'
-import FreeShippingIcon from './FreeShippingIcon'
+import PriceBox from '../PriceBox'
+import FreeShippingIcon from '../FreeShippingIcon'
 import styles from './ResultItem.module.scss' 
 
 
@@ -14,7 +14,7 @@ export default function ResultItem({item,query}) {
             <div className={styles.picture_wrapper}>
                 <Link href={`/items/${item.id}?query=${query}`} passHref={true}>
                     <a>
-                        <Image src={item.picture} width={180} height={180} alt={`Imagen del producto ${item.title}`} objectFit="scale-down"  quality="100"/>
+                        <Image src={item.picture} width={180} height={180} alt={`Imagen del producto ${item.title}`} objectFit="contain"  quality="100"/>
                     </a>
                 </Link>
             </div>

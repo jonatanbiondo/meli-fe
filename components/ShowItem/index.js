@@ -1,8 +1,8 @@
  
 import Image from 'next/image'
-import PriceBox from './PriceBox'
-import FreeShippingIcon from './FreeShippingIcon'
-import BuyButton from './BuyButton'
+import PriceBox from '../PriceBox'
+import FreeShippingIcon from '../FreeShippingIcon'
+import BuyButton from '../BuyButton'
 import styles from './ShowItem.module.scss' 
 
 

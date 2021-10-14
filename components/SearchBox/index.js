@@ -1,5 +1,5 @@
 import InputSearch from './InputSearch'
-import Logo from './Logo'
+import Logo from '../Logo'
 import styles from './SearchBox.module.scss'
 
 export default function SearchBox({query}) {
