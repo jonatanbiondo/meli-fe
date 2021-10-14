@@ -10,11 +10,11 @@ export default function Home() {
         <title>Caja de Busqueda</title>
         <meta name="description" content="Home Challenge MercadoLibre" />
         <link rel="icon" href="/Logo_ML.png" />
-      </Head>      
+      </Head>
+
       <main >
         <SearchBox />
       </main>
-
       
     </div>
   )

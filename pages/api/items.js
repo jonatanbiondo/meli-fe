@@ -12,8 +12,7 @@ export default async function handler(req, res) {
 
     if(response.status === 200){
         const data = response.data
-
-        console.log(data.available_filters)
+ 
 
         let categories = data.filters.find((item) => { return item.id === 'category'})
 
