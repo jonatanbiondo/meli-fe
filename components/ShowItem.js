@@ -10,7 +10,6 @@ export default function ResultItem({item}) {
 
   const condition = (item.condition  == 'new') ? 'Nuevo' : 'Usado'
 
-  console.log(item.description)
 
   return (
     
