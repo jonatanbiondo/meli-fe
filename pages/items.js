@@ -42,7 +42,7 @@ function ItemsList(){
            
           {
           (data.items.length >0 )? 
-              <Resultlist items={data.items} />
+              <Resultlist items={data.items}  query={router.query.query}/>
               : ''
           }  
 

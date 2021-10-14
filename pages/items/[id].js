@@ -5,20 +5,31 @@ import {api} from "../../utils/api"
 import styles from '../../styles/Product.module.scss'
 import Breadcrum from "../../components/Breadcrum"
 import ShowItem from "../../components/ShowItem"
+import { useEffect } from 'react'
 
-export default function Items({item, categories, query}) {
+export default function Items({item, categories}) {
   
 
   const router = useRouter()
 
   let title = (router.isFallback)? "Cargando Producto ..." : item.title
+   
+   
+  let query =  router.query.query 
  
+  
+
+  useEffect(() => {   
+     // Actualiza el título del documento usando la API del navegador    
+     query =  router.query.query   
+  });
+
 
   return (
     <div>
       <Head>
         <title> {title} | MercadoLibre</title>
-        <meta name="description" content={"Lista de resultados de busqueda : " + query }  />
+        <meta name="description" content={title}  />
         <link rel="icon" href="/Logo_ML.png" />
       </Head>
      
