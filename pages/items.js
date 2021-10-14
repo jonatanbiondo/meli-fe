@@ -4,48 +4,61 @@ import {api} from "../utils/api"
 import styles from '../styles/Items.module.scss'
 import Breadcrum from "../components/Breadcrum"
 import Resultlist from "../components/Resultlist"
+import useSWR, { SWRConfig } from 'swr'
+import { useRouter } from 'next/dist/client/router'
 
-export default function Items({items, categories, query}) {
-  
 
-   
+const fetcher = (url) => { return api.get(url).then((res) => { return res.data} ) };
+
+
+function ItemsList(){
+  const router = useRouter()
+  const { data, error } = useSWR(`/api/items?query=${router.query.query}`)
+ 
+  // there should be no `undefined` state
+  console.log("Is data ready?", !!data);
+
+  if (error) return "An error has occurred.";
+  if (!data) return "Loading...";
+
 
   return (
     <div>
 
       <Head>
-        <title>Caja de Busqueda</title>
-        <meta name="description" content={"Lista de resultados de busqueda : " + query }  />
+        <title>{ router.query.query } |  MercadoLibre </title>
+        <meta name="description" content={"Lista de resultados de busqueda : " + router.query.query }  />
         <link rel="icon" href="/Logo_ML.png" />
       </Head>
 
       <header>
-        <SearchBox query={query}/>
+        <SearchBox query={router.query.query}/>
       </header>
 
       <main className={styles.main}>
-
-        <div className={styles.main_container}>
+        <div className={styles.main_container}>       
           
-          
-          <Breadcrum items={categories} />
-              
+          <Breadcrum items={data.categories} />            
            
           {
-          (items.length >0 )? 
-              <Resultlist items={items} />
+          (data.items.length >0 )? 
+              <Resultlist items={data.items} />
               : ''
-          }
+          }  
 
-          
-
-        </div>
-
-         
-      </main>
-
-      
+        </div>       
+      </main>    
     </div>
+  )
+}
+
+
+
+export default function Items({fallback}) { 
+  return (
+    <SWRConfig value={{ fallback }}>
+      <ItemsList />
+    </SWRConfig>
   )
 }
 
@@ -53,15 +66,14 @@ export default function Items({items, categories, query}) {
  export async function getServerSideProps({query}) {
     const queryString = query.query 
 
-
-    const res = await api.get("/api/items", {params:{query:queryString}})
+    const url = `/api/items?query=${queryString}`
+    let data = await fetcher(url)
      
-
     return {
-      props: {
-          items: res.data.items,
-          categories:res.data.categories,
-          query: queryString
+      props: {    
+          fallback:{
+            [url]: data
+          }
       }, 
     }
   }

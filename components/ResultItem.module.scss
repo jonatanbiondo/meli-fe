@@ -1,5 +1,7 @@
+@import "../styles/utils.module.scss";
+
 .result_item{
-    border-bottom: thin solid #eee;
+    border-bottom: thin solid $color-gray-4;
     display: -webkit-flex;
     display: flex;   
     width: 100%;
@@ -8,30 +10,31 @@
 .result_item_wrapper{
     display: flex;
     flex-direction: row;
-    padding: 20px 10px;
+    padding: 16px 16px;
     width: 100%;
     position: relative;
 }
 
-.picture_wrapper{ 
+.picture_wrapper{
     height: 180px;
-    margin: 0 20px;
+    margin: 0  16px 0 0;
     overflow: hidden; 
     width: 180px;
-    border-radius: 10px;
+    border-radius: 4px;
 }
-
  
 .result_title{
-    color: #333;
-    font-size: 19px;
-    font-weight: 300;
-    line-height: 1.3;
-    margin: 20px 0 ;
+    margin: 32px 0 0 0 ;
+    display: block;
+    h2{
+        color: $color-gray-1;
+        font-size: 18px;
+        font-weight: 300;
+        margin: 0;
+    }
 }
 
-
-
 .description{
+    padding: 16px 0;
     width: calc(100% - 200px);
 }

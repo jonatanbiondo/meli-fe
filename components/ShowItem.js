@@ -17,7 +17,7 @@ export default function ResultItem({item}) {
         
         <div className={styles.column_left}>
             <div className={styles.picture_wrapper}>
-                <Image src={item.picture} width={500} height={500} alt={`Imagen del producto ${item.title}`} objectFit="scale-down"  />
+                <Image src={item.picture} width={680} height={680} alt={`Imagen del producto ${item.title}`} objectFit="contain"  />
             </div>
 
             <div className={styles.description_wrapper}>

@@ -1,14 +1,12 @@
 .navLogo{
-    padding: 10px;
+    padding: 10px 0;
     a{
         background-image: url( "/Logo_ML@2x.png.png");
-        height: 36px;
-       
+        height: 36px;       
         width: 53px;
         background-repeat: round;
         overflow: hidden;
-        text-indent: -999px; 
-        
+        text-indent: -999px;
         display: inline-block;
     }
 }

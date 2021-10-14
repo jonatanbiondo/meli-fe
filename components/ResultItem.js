@@ -22,9 +22,9 @@ export default function ResultItem({item}) {
             <div className={styles.description}>
                 <PriceBox price={item.price}   showDecimal={false} size="sm"/>
                 {item.free_shipping? <FreeShippingIcon /> : ''}
-                <Link href={`/items/${item.id}`} passHref={true}>
-                    <a>
-                        <h2 className={styles.result_title}>{item.title}</h2>
+                <Link  href={`/items/${item.id}`} passHref={true}>
+                    <a className={styles.result_title} > 
+                        <h2 >{item.title}</h2>
                     </a>
                 </Link>
             </div>

@@ -11,25 +11,22 @@ export default function Items({item, categories, query}) {
 
   const router = useRouter()
 
-  
+  let title = (router.isFallback)? "Cargando Producto ..." : item.title
  
 
   return (
     <div>
-
       <Head>
-        <title>Caja de Busqueda</title>
+        <title> {title} | MercadoLibre</title>
         <meta name="description" content={"Lista de resultados de busqueda : " + query }  />
         <link rel="icon" href="/Logo_ML.png" />
       </Head>
-
      
       <header>
         <SearchBox query={query}/>
       </header>
 
       <main className={styles.main}>
-
         {(router.isFallback)?
           (<div>Cargando Producto</div>):
           (<div className={styles.main_container}>      
@@ -40,9 +37,7 @@ export default function Items({item, categories, query}) {
           </div>)
         }
         
-      </main>
-
-      
+      </main>    
     </div>
   )
 }

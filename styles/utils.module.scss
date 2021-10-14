@@ -1,6 +1,31 @@
-$color-primary: #fff159;	
+$color-primary: #FFE600;
+$color-gray-1: #333;
+$color-gray-2: #666;
+$color-gray-3: #999;
+$color-gray-4: #eee;
+$color-btn-primary: #3483FA;
 
 
 .primary{
     background-color: $color-primary;
+}
+
+.gray-1{
+    background-color: $color-gray-1;
+}
+
+.gray-2{
+    background-color: $color-gray-2;
+}
+
+.gray-3{
+    background-color: $color-gray-3;
+}
+
+.gray-4{
+    background-color: $color-gray-4;
+}
+
+.btn-primary{
+    background-color: $color-btn-primary;
 }

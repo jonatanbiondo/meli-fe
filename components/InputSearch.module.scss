@@ -1,3 +1,5 @@
+@import "../styles/utils.module.scss";
+
 form.InputSearch{
     right: 10px; 
     left: 85px; 
@@ -10,12 +12,15 @@ form.InputSearch{
 
 .InputSearch input[type="text"]{
     padding: 5px 10px 7px 10px;
-    box-shadow: 0 1px 2px 0 #EFEF;
+    box-shadow: 0 1px 3px 0 #CCC;
     height: 39px;
     background-color: #FFF;
     border: 0 rgba(0,0,0,.2); 
     position: relative;
     width: 100%;
+    font-size: 18px;
+    outline: none;
+    color: $color-gray-1;
 }
 
 .InputSearch button{ 
@@ -26,13 +31,13 @@ form.InputSearch{
     width: 46px;
     height: 40px;
     border: 0 rgba(0,0,0,.2);
-    background-color: rgb(228, 227, 227);
+    background-color:  $color-gray-4;
     top: 8px;
     right: 1px;
     padding: 0;
     padding-top: 0px;
     border: none;
     font-size: 22px;
-    color: #666;
+    color:  $color-gray-2;
     line-height: 1em;
 }
