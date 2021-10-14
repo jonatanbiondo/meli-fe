@@ -4,7 +4,7 @@ export default function FreeShippingIcon(props) {
     
     return (
         <>
-             <Image src="/ic_shipping.png" width={16} height={16}/>
+             <Image src="/ic_shipping.png" width={16} height={16} alt="Icono de Envio gratis" />
         </>
     )
 

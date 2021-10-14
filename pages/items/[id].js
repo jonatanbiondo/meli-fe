@@ -5,7 +5,7 @@ import {api} from "../../utils/api"
 import styles from '../../styles/Product.module.scss'
 import Breadcrum from "../../components/Breadcrum"
 import ShowItem from "../../components/ShowItem"
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 export default function Items({item, categories}) {
   
@@ -16,14 +16,8 @@ export default function Items({item, categories}) {
    
    
   let query =  router.query.query 
- 
+  query =  router.query.query   
   
-
-  useEffect(() => {   
-     // Actualiza el título del documento usando la API del navegador    
-     query =  router.query.query   
-  });
-
 
   return (
     <div>
